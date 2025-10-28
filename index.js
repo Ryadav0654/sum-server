@@ -12,7 +12,7 @@ app.get("/sum", (req, res) => {
 
     return res.json({
         "message": "Sum is calculated!",
-        "sum": toString(sum)
+        "sum": sum.toString()
     })
 })
 app.listen(3000, () => {
