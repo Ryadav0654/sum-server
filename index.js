@@ -8,9 +8,11 @@ app.get("/", (req, res) => {
 
 app.get("/sum", (req, res) => {
     const {a, b} = req.query;
+    const sum = parseInt(a) + parseInt(b);
+
     return res.json({
         "message": "Sum is calculated!",
-        "sum": parseInt(a) + parseInt(b)
+        "sum": toString(sum)
     })
 })
 app.listen(3000, () => {
