@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage("Checkout code"){
             steps{
-                git "https://github.com/Ryadav0654/sum-server.git"
+                git branch: 'main', url: 'https://github.com/Ryadav0654/sum-server.git'
             }
         }
         stage("Build") {
@@ -20,6 +20,14 @@ pipeline {
             steps {
                 sh 'echo "deploying..."'
             }
+        }
+    }
+    post {
+        success {
+            echo '✅ Pipeline completed successfully!'
+        }
+        failure {
+            echo '❌ Pipeline failed!'
         }
     }
 }
