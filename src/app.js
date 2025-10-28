@@ -1,4 +1,4 @@
-import express from "express";
+const express = require("express");
 
 const app = express();
 
@@ -15,6 +15,5 @@ app.get("/sum", (req, res) => {
         "sum": sum.toString()
     })
 })
-app.listen(3000, () => {
-    console.log("server is listening at 3000");
-})
+
+module.exports = app;
