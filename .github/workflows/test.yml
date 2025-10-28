@@ -1,10 +1,6 @@
-
 name: Test my sum-server
 on:
   push:
-    branches:
-      - main
-  pull_requests:
     branches:
       - main
 jobs:
